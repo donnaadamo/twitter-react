@@ -1,4 +1,4 @@
-An exercise using React to recreate Twitter web.
+An exercise using React to recreate Twitter web using SCSS.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
