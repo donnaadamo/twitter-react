@@ -1,0 +1,25 @@
+.home {
+    display: flex;
+    
+    &__col {
+        width: 33%;
+        padding: 0 15px;
+        
+        &--center {
+            width: 50%;
+            position: absolute;
+            left: 20%;
+        }
+
+        &--left {
+            position: fixed;
+        }
+
+        &--right {
+            position: fixed;
+            left: 70%;
+            overflow-y: scroll;
+            max-height: 100vh;
+        }
+    }
+}

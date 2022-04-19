@@ -1,0 +1,159 @@
+.searchbar {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: white;
+
+    &__search {
+        width: 80%;
+        background-color: $background-hover;
+        border: 1px solid transparent;
+        padding: 15px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        &--active {
+            background: white;
+            border: 1px solid $primary;
+
+            & i {
+                color: $primary;
+            }
+        }
+
+        &__i {
+            font-size: 1.3rem;
+            color: $muted;
+            margin-left: 5px;
+        }
+    
+        &__input {
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: $muted;
+            width: 100%;
+            margin-left: 20px;
+    
+            &:focus {
+                outline: none;
+            }
+
+            &__button {
+                background: transparent;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &__i {
+                    font-size: 1.4rem;
+                    color: $primary;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+            }
+        }
+    }
+    
+    &__dropdown {
+        background: white;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        border-radius: 15px;
+        min-height: 200px;
+        max-height: 500px;
+        color: $muted;
+        font-size: 1.3rem;
+        color: $font;
+
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+        top: 64px;
+        width: 80%;
+
+        overflow-y: auto; 
+
+        &__p {
+            padding: 20px;
+        }
+
+        &__hashtag-search {
+            padding: 20px;
+            border-bottom: 1px solid $border;
+
+            &:hover {
+                cursor: pointer;
+                background: $background-hover;
+            }
+
+            &__p {
+                font-size: 1.4rem;
+                color: black;
+                font-weight: bold;
+            }
+
+            &__span {
+                color: $muted;
+                font-size: 1.3rem;
+            }
+        }
+
+        &__accounts-container {
+            &__account-search {
+                border-bottom: 1px solid $border;
+                display: flex;
+                padding: 10px 15px;
+                width: 100%;
+                font-size: 1.2rem;
+
+                &:only-child {
+                    margin-top: 10px;
+                    border-top: none!important;
+                }
+
+                &:nth-child(1) {
+                    border-top: 15px solid $border;
+                }
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: $background-hover;
+                }
+    
+                &__profile-picture {            
+                    &__img {
+                        border-radius: 50px;
+                    }
+                }
+    
+                &__account {
+                    margin-left: 20px;
+                    width: 100%;
+    
+                    &__span {
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+            }
+        }
+        
+
+        &--go-to {
+            padding: 20px 15px;
+
+            &:hover {
+                cursor: pointer;
+                background: $background-hover;
+            }
+        }
+    }
+}

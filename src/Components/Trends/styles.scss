@@ -1,0 +1,114 @@
+.trends {
+    background-color: $background;
+    margin: 20px 0;
+    border-radius: 20px;
+    width: 80%;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        font-family: 'Helvetica';
+        font-weight: bold;
+        padding: 10px 0;
+        text-align: left;
+        margin-left: 20px;
+        font-size: 1.2rem;
+
+        &__i {
+            font-size: 1.5rem;
+            color: $primary;
+            padding: 10px;
+            margin-right: 10px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $button-hover;
+                border-radius: 50px;
+                @include all-ease();
+            }
+        }
+    }
+
+    &__trend {
+        padding: 15px 20px;;
+        border-bottom: 1px solid $border;
+        text-align: left;
+
+        &__content {
+
+            &__position {
+                color: $muted;
+                font-size: 1rem;
+            }
+
+            &__hashtag {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin: 5px 0;
+            }
+
+            &__tweets {
+                color: $muted;
+                font-size: 1.2rem;
+            }
+        }
+
+        &__news {
+            margin-top: 20px;
+            border: 1px solid $border;
+            border-radius: 20px;
+            display: flex;
+
+            &__content {
+                padding: 10px 5px 10px 20px;
+
+                &__p {
+                    color: $muted;
+                    font-size: 1.1rem;
+                    line-height: 2rem;
+                }
+
+                &__span {
+                    font-size: 1.2rem;                   
+                }
+            }
+
+            &__image {
+                line-height: 0;
+                
+                &__img {
+                    border-radius: 0 20px 20px 0;
+                    height: 100%;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: $background-hover;
+            cursor: pointer;
+        }
+
+        &:nth-child(2) {
+            border-top: 1px solid $border;
+        }
+ 
+    }
+
+    &__show-more {
+        padding: 10px 15px;        
+
+        &:hover {
+            cursor: pointer;
+            background-color: $background-hover;
+            border-radius: 0  0 20px 20px;;
+        }
+        
+        &__a {
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+    
+}

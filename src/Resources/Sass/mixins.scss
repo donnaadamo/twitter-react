@@ -1,0 +1,78 @@
+@mixin breakpoint($point, $value: 0) {
+	@if $point == 'small' {
+		@media only screen and (max-width: 768px) {
+			@content;
+		}
+	}
+	@if $point == 'smaller' {
+		@media only screen and (max-width: 370px) {
+			@content;
+		}
+	}
+
+	@if $point == 'small-l' {
+		@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+			@content;
+		}
+	} @else if $point == 'medium' {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $point == 'medium-short' {
+		@media (min-width: 768px) and (max-width: 1023px) and (min-height: 400px) and (max-height: 1023px) {
+			@content;
+		}
+	} @else if $point == 'medium-small' {
+		@media (min-width: 480px) and (max-width: 768px) and (min-height: 400px) and (max-height: 1023px) {
+			@content;
+		}
+	} @else if $point == 'medium-b' {
+		@media (max-width: 992px) {
+			@content;
+		}
+	} @else if $point == 'medium-height-b' {
+		@media (min-width: 992px) {
+			@content;
+		}
+	} @else if $point == 'medium-cube' {
+		@media (min-width: 768px) and (max-height: 600) {
+			@content;
+		}
+	} @else if $point == 'medium-to-large' {
+		@media (min-width: 768px) and (max-width: 1024) {
+			@content;
+		}
+	} @else if $point == 'medium-height-slider' {
+		@media (max-height: 600px) {
+			@content;
+		}
+	} @else if $point == 'pre-large' {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	} @else if $point == 'large' {
+		@media (min-width: 1024px) {
+			@content;
+		}
+	} @else if $point == 'extra-large' {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $point == 'extra-large1' {
+		@media (min-width: 1400px) {
+			@content;
+		}
+	} @else if $point == 'extra-large2' {
+		@media (min-width: 1600px) {
+			@content;
+		}
+	} @else {
+		@media ($point: $value) {
+			@content;
+		}
+	}
+}
+
+@mixin all-ease() {
+	transition: all ease 0.2s;
+}

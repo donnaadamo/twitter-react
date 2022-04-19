@@ -1,0 +1,219 @@
+.tweet {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(223, 223, 223, 0.534);
+    padding: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background: $background;
+    }
+
+    &__interaction {
+        width: 100%;
+        display: flex;
+        margin: 10px 0;
+        margin-left: 60px;
+        color: $muted;
+        align-items: center;
+        font-size: 1rem;
+
+        &__i {
+            margin-right: 10px;
+        }
+
+        &__p {
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &__image {
+            height: 100%;
+            margin: 0 5px;
+
+            &__img {
+                border-radius: 50px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;            
+            margin-left: 10px;
+
+            &__account {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                position: relative;
+
+                &__user {
+                    display: flex;                    
+                }
+
+                &__p {
+                    font-size: 1.2rem;
+                    color: $muted;
+
+                    &__span {
+                        font-weight: bold;
+                        color: black;
+                        margin-right: 5px;
+                        font-size: 1.3rem;
+                    }
+
+                    &--time {
+                        padding-left: 5px;
+                        font-size: 1.2rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:hover > &__span {
+                        text-decoration: underline;
+                    }
+                }
+
+                &__i {
+                    color: $muted;
+                    padding: 10px;
+
+                    &:hover {
+                        color: $primary;
+                        background-color: $button-hover;
+                        border-radius: 50px;
+                    }
+                }
+
+                &__dropdown {
+                    background: white;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+
+                    &__ul {
+                        list-style: none;
+            
+                        &__li {
+                            padding: 15px;
+                            font-size: 1.2rem;
+                            color: black;
+                            display: flex;
+                            justify-items: center;
+            
+                            &:hover {
+                                cursor: pointer;
+                                background: $background-hover;
+                            }
+
+                            &__i {
+                                color: $muted;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__tweet {
+                font-size: 1.2rem;
+            }
+
+            &__actions {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;                
+                font-size: 1.2rem;
+                width: 80%;
+                color: $muted;
+
+                &__comment, &__share {
+                    display: flex;
+                    align-items: center;
+
+                    &__i {
+                        padding: 5px;
+                    }
+
+                    &__p {
+                        padding: 5px;
+                    }
+
+                    &:hover {
+                        color: $primary;
+                        cursor: pointer;
+                    }
+
+                    &:hover &__i {
+                        background: $button-hover;
+                        border-radius: 50px;
+                        @include all-ease();
+                    }
+                }
+
+                &__retweet {
+                    display: flex;
+                    align-items: center;
+
+                    &__i {
+                        padding: 5px;
+                    }
+
+                    &__p {
+                        padding: 5px;
+                    }
+
+                    &:hover {
+                        color: #17BF63;
+                        cursor: pointer;
+                    }
+
+                    &:hover &__i {
+                        background: #DEF3EB;
+                        border-radius: 50px;
+                        @include all-ease();
+                    }
+                }
+                
+                &__heart {
+                    display: flex;
+                    align-items: center;
+
+                    &__i {
+                        padding: 5px;
+                    }
+
+                    &__p {
+                        padding: 5px;
+                    }
+
+                    &:hover {
+                        color: #E76A92;
+                        cursor: pointer;
+                    }
+
+                    &:hover &__i {
+                        background: #F3E2EA;
+                        border-radius: 50px;
+                        @include all-ease();
+                    }
+                }
+
+            }
+        }
+    }
+}
